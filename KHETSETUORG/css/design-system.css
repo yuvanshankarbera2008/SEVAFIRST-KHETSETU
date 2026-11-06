@@ -1,0 +1,200 @@
+/* ==========================================================================
+   KhetSetu (खेत सेतु) — Design System & Variables
+   Theme: Earthy Forest Green, Warm Cream, Marigold / Saffron, Muted Terracotta
+   "Built for Bharat" — Responsive, Mobile-First, Accessible
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Brand Palette: Forest Green */
+  --ks-green-950: #0d2316;
+  --ks-green-900: #143522;
+  --ks-green-800: #1b442b;
+  --ks-green-700: #235838;
+  --ks-green-600: #2d6f47;
+  --ks-green-500: #388d5b;
+  --ks-green-400: #58a977;
+  --ks-green-200: #bfe0cc;
+  --ks-green-100: #e4f2ea;
+  --ks-green-50:  #f3f8f5;
+
+  /* Warm Cream & Natural Textures */
+  --ks-cream-bg:      #FAF7F2;
+  --ks-cream-surface: #F4EFE6;
+  --ks-cream-card:    #FFFFFF;
+  --ks-cream-subtle:  #ECE5D8;
+  --ks-cream-border:  #E2DBD0;
+
+  /* Accent: Marigold / Saffron */
+  --ks-marigold:       #E58E26;
+  --ks-marigold-hover: #CF7A16;
+  --ks-marigold-light: #FEF4E5;
+  --ks-marigold-border:#FCD9AA;
+  --ks-saffron:        #D35400;
+  --ks-saffron-light:  #FBEFE8;
+
+  /* Muted Terracotta (Alerts, Warnings, Concerns) */
+  --ks-terracotta:       #C0392B;
+  --ks-terracotta-hover: #A93226;
+  --ks-terracotta-muted: #D9534F;
+  --ks-terracotta-light: #FDF2F0;
+  --ks-terracotta-border:#F5C6CB;
+
+  /* Text & Neutrals */
+  --ks-text-primary:   #1A221E;
+  --ks-text-secondary: #4A5750;
+  --ks-text-tertiary:  #708076;
+  --ks-text-on-dark:   #FFFFFF;
+  --ks-text-on-accent: #FFFFFF;
+
+  /* Status Colors */
+  --ks-status-live:      #27AE60;
+  --ks-status-live-bg:   #EAFAF1;
+  --ks-status-hold:      #F39C12;
+  --ks-status-hold-bg:   #FEF9E7;
+  --ks-status-review:    #2980B9;
+  --ks-status-review-bg: #EBF5FB;
+
+  /* Typography */
+  --ks-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --ks-font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --ks-font-indic: 'Noto Sans', system-ui, sans-serif;
+
+  /* Language Specific Font Overrides */
+  --ks-font-te: 'Noto Sans Telugu', var(--ks-font-sans);
+  --ks-font-hi: 'Noto Sans Devanagari', var(--ks-font-sans);
+  --ks-font-ta: 'Noto Sans Tamil', var(--ks-font-sans);
+  --ks-font-mr: 'Noto Sans Devanagari', var(--ks-font-sans);
+  --ks-font-bn: 'Noto Sans Bengali', var(--ks-font-sans);
+  --ks-font-kn: 'Noto Sans Kannada', var(--ks-font-sans);
+  --ks-font-gu: 'Noto Sans Gujarati', var(--ks-font-sans);
+
+  /* Elevation & Shadows */
+  --ks-shadow-xs: 0 1px 2px rgba(20, 53, 34, 0.05);
+  --ks-shadow-sm: 0 2px 6px rgba(20, 53, 34, 0.06), 0 1px 3px rgba(20, 53, 34, 0.04);
+  --ks-shadow-md: 0 6px 16px rgba(20, 53, 34, 0.08), 0 2px 6px rgba(20, 53, 34, 0.04);
+  --ks-shadow-lg: 0 14px 32px rgba(20, 53, 34, 0.12), 0 4px 10px rgba(20, 53, 34, 0.05);
+  --ks-shadow-xl: 0 22px 48px rgba(20, 53, 34, 0.16), 0 8px 18px rgba(20, 53, 34, 0.06);
+
+  /* Border Radii */
+  --ks-radius-xs: 4px;
+  --ks-radius-sm: 8px;
+  --ks-radius-md: 12px;
+  --ks-radius-lg: 18px;
+  --ks-radius-xl: 24px;
+  --ks-radius-2xl: 32px;
+  --ks-radius-full: 9999px;
+
+  /* Motion & Easing (Section 2) */
+  --ks-ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+  --ks-ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ks-dur-fast:   180ms;
+  --ks-dur-mid:    350ms;
+  --ks-dur-slow:   700ms;
+
+  /* Tap targets & accessible sizing */
+  --ks-tap-min: 44px;
+  --ks-tap-lg:  52px;
+}
+
+/* Lang-specific font cascades */
+html[lang="te"] { font-family: var(--ks-font-te); }
+html[lang="hi"] { font-family: var(--ks-font-hi); }
+html[lang="ta"] { font-family: var(--ks-font-ta); }
+html[lang="mr"] { font-family: var(--ks-font-mr); }
+html[lang="bn"] { font-family: var(--ks-font-bn); }
+html[lang="kn"] { font-family: var(--ks-font-kn); }
+html[lang="gu"] { font-family: var(--ks-font-gu); }
+
+/* Global Box Sizing & Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--ks-font-sans);
+  background-color: var(--ks-cream-bg);
+  color: var(--ks-text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ks-green-950);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.serif-italic {
+  font-family: var(--ks-font-serif);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--ks-marigold);
+}
+
+.text-marigold { color: var(--ks-marigold); }
+.text-terracotta { color: var(--ks-terracotta); }
+.text-forest { color: var(--ks-green-800); }
+.text-muted { color: var(--ks-text-secondary); }
+.text-subtle { color: var(--ks-text-tertiary); }
+
+/* Accessible Focus States */
+:focus-visible {
+  outline: 3px solid var(--ks-marigold);
+  outline-offset: 3px;
+  border-radius: var(--ks-radius-xs);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 20px;
+  background: var(--ks-marigold);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: var(--ks-radius-md);
+  font-weight: 600;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top var(--ks-dur-fast) var(--ks-ease-spring);
+}
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Low-literacy and farmer screen sizing (Section 1) */
+.farmer-mode, [data-view="farmer"] {
+  --ks-body-size: 1.125rem;
+}
+.farmer-mode p, [data-view="farmer"] p,
+.farmer-mode .btn, [data-view="farmer"] .btn {
+  font-size: 1.05rem;
+}
+

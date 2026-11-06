@@ -1,0 +1,20 @@
+{
+  "name": "khetsetu",
+  "version": "1.0.0",
+  "description": "KhetSetu (खेत सेतु) — Direct Farm-to-Organisation Marketplace Prototype for India",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "agritech",
+    "marketplace",
+    "khetsetu",
+    "india",
+    "enam"
+  ],
+  "author": "KhetSetu Team",
+  "license": "MIT"
+}
+
